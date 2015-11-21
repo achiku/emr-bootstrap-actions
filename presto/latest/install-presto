@@ -186,7 +186,8 @@ def setConfigProperties(metaData)
     config << 'discovery-server.enabled=true'
     config << 'sink.max-buffer-size=1GB'
     config << 'node-scheduler.include-coordinator=false'
-    config << "task.max-memory=#{memory['max']}MB"
+    config << "query.max-memory=#{memory['max']}MB"
+    config << "query.max-memory-per-node=10GB"
     config << 'query.max-history=40'
     config << 'query.max-age=30m'
     config << 'http-server.http.port=8080'
